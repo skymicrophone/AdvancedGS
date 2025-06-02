@@ -3,7 +3,7 @@ import time, requests
 from lxml import etree
 from Execution import TableModel as TM
 headers={'User-Agent':'Hello World'};list0=[]
-aaa1=requests.get("https://mbti.fan/ja/tags/jujutsu-kaisen",headers=headers)
+aaa1=requests.get("https://mbti.fan/ja/tags/athlete",headers=headers)
 aaa1.encoding="UTF-8";xxx1=etree.HTML(aaa1.text);ash1=xxx1.xpath("//*[@class='card__a']")
 for x1 in ash1:
     try:
