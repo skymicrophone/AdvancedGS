@@ -22,7 +22,6 @@ public class SSS {
 				Document doc_B0=Jsoup.connect("https://mbti.fan/ja/tags/kpop-idol/"+String.valueOf(i0+1)).get();
 				Elements ele_B0=doc_B0.select(".card__a");int rank0=1+i0*20;
 				for(Element attr_B0 : ele_B0){
-					//JSONObject MAP_M=new JSONObject();
 					try {
 						int total0=0;LinkedHashMap<String,String> MAP_M=new LinkedHashMap<>();
 						MAP_M.put("Rank",String.valueOf(rank0));MAP_M.put("Name",attr_B0.select("h2").text());
