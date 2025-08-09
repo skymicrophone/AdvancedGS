@@ -17,7 +17,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 public class SSS {
 	public static void main(String[] args){
 		try {
-			JSONArray KKK0=new JSONArray();String Path0="C:\\Users\\53113\\Desktop\\mbtifan.json";
+			JSONArray KKK0=new JSONArray();String Path0="C:\\Users\\Administrator\\Desktop\\mbtifan.json";
 			for(int i0=0;i0<1;i0++) {
 				Document doc_B0=Jsoup.connect("https://mbti.fan/ja/tags/kpop-idol/"+String.valueOf(i0+1)).get();
 				Elements ele_B0=doc_B0.select(".card__a");int rank0=1+i0*20;
@@ -35,7 +35,7 @@ public class SSS {
 						}
 						MAP_M.put("Total",String.valueOf(total0));KKK0.add(JSONObject.toJSON(MAP_M));
 						System.out.println(JSONObject.toJSON(MAP_M));rank0+=1;total0=0;
-					} catch (IOException e) {System.out.println(e);}
+					} catch (IOException e) {System.out.println(e);rank0+=1;}
 				}
 			}
 			//File file_M=new File(Path0);OutputStreamWriter wri_M=new OutputStreamWriter(new FileOutputStream(file_M),"UTF-8");
