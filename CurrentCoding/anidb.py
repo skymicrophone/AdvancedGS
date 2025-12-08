@@ -23,5 +23,3 @@ for i0 in range(0,10):
 pddf0=pd.DataFrame(kkk0);TM(pddf0).TkinterTable('AniDB','750x450',20,15,'n')
 #pddf0.to_csv(r"C:\Users\53113\Desktop\anidb0.csv",index=False)
 #pddf0.to_excel(r"C:\Users\53113\Desktop\anidb0.xlsx",index=False)
-
-
