@@ -18,8 +18,8 @@ for i0 in range(0,10):
             exec_art+="art0[\"Weight\"]=y0.xpath(\"span/@title\")[0]\n\t\telse:\n\t\t\tart0[y0.xpath(\"@data-label\")[0]]="
             exec(exec_art+"y0.xpath(\"text()\")[0].replace(\"\\n\",\"\").replace(\"\\t\",\"\")\n\texcept:\n\t\tpass");kkk0.append(art0)
         #print("Finished!")
-    except:
-        print("Error!")
+    except Exception as e:
+        print("Error occurred, because "+str(e)+"!")
 pddf0=pd.DataFrame(kkk0);TM(pddf0).TkinterTable('AniDB','750x450',20,15,'n')
 #pddf0.to_csv(r"C:\Users\53113\Desktop\anidb0.csv",index=False)
 #pddf0.to_excel(r"C:\Users\53113\Desktop\anidb0.xlsx",index=False)
