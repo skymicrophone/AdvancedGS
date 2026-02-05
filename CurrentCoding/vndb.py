@@ -5,7 +5,7 @@ from Execution import TableModel as TM
 headers={'User-Agent':'Hello World'};kkk0=[]
 for i0 in range(0,10):
     try:
-        aaa0=requests.get("https://vndb.org/g140?p="+str(i0),headers=headers)
+        aaa0=requests.get("https://vndb.org/g140?p="+str(i0+1),headers=headers)
         aaa0.encoding="UTF-8";xxx0=etree.HTML(aaa0.text);ash0=xxx0.xpath("//*[@class='browse vnbrowse']/table/tr")
         for x0 in ash0:
             art0={};exe_v1="\"]=x0.xpath(\"td[";exe_v2="\"]=\", \".join(x0.xpath(\"td[";exe_v3="]/abbr/@title\"));art0[\""
@@ -19,3 +19,4 @@ for i0 in range(0,10):
 pddf0=pd.DataFrame(kkk0);TM(pddf0).TkinterTable('VNDB','750x450',20,15,'n')
 #pddf0.to_csv(r"C:\Users\53113\Desktop\vndb0.csv",index=False)
 #pddf0.to_excel(r"C:\Users\53113\Desktop\vndb0.xlsx",index=False)
+
