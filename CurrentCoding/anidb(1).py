@@ -20,6 +20,7 @@ for i0 in range(0,10):
         #print("Finished!")
     except Exception as e:
         print("Error occurred, because "+str(e)+"!")
-pddf0=pd.DataFrame(kkk0);TM(pddf0).TkinterTable('AniDB','750x450',20,15,'n')
+pddf0=pd.DataFrame(kkk0);pd_len=len(pddf0.columns);pddf_c1=pddf0.pop("URL");pddf0.insert(pd_len-1,"URL",pddf_c1)
+pddf_c2=pddf0.pop("URL(IMG)");pddf0.insert(pd_len-1,"URL(IMG)",pddf_c2);TM(pddf0).TkinterTable('AniDB','750x450',20,15,'n')
 #pddf0.to_csv(r"C:\Users\53113\Desktop\anidb0.csv",index=False)
 #pddf0.to_excel(r"C:\Users\53113\Desktop\anidb0.xlsx",index=False)
